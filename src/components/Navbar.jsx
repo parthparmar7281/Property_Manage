@@ -1,6 +1,16 @@
 import React from 'react'
 const Navbar = () => {
   return (
+    <>
+    <div class="d-inline-block d-lg-none site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
       <nav className="site-nav">
       <div className="container">
         <div className="menu-bg-wrap">
@@ -30,7 +40,7 @@ const Navbar = () => {
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
-
+            
             <a
               href="#"
               className="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
@@ -43,6 +53,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </>
   )
 }
 

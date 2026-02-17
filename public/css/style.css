@@ -9668,26 +9668,13 @@ textarea {
   background-position: cnter center;
   background-repeat: no-repeat;
   background-color: #00204a; }
-  .hero.overlay {
-    position: relative; }
-    .hero.overlay:before {
-      background-color: rgba(0, 0, 0, 0.5);
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      z-index: 1; }
+
   .hero, .hero > .container > .row {
     height: 100vh;
     min-height: 600px; }
-  .hero.page-inner, .hero.page-inner > .container > .row {
-    height: 70vh;
-    min-height: 300px; }
   .hero > .container {
     position: relative;
-    z-index: 2; }
+    z-index: 1; }
   .hero .heading {
     color: #fff;
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
@@ -9728,23 +9715,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0; }
-  .hero-slide .img {
-    height: 100vh;
-    min-height: 600px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; }
-    .hero-slide .img.overlay {
-      position: relative; }
-      .hero-slide .img.overlay:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 1;
-        background: rgba(34, 34, 34, 0.4); }
+
 
 .section {
   padding-top: 4rem;
