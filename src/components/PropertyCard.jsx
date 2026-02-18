@@ -1,40 +1,56 @@
-import React from 'react'
+import React from "react";
 
-const PropertyCard = () => {
+const PropertyCard = ({ property }) => {
+
   return (
     <div className="property-item">
-                  <a href="property-single.html" className="img">
-                    <img src="images/img_6.jpg" alt="Image" className="img-fluid" />
-                  </a>
+      <a href="#" className="img">
+        <img
+          src={property?.img}
+          alt={property?.title}
+          className="img-fluid"
+        />
+      </a>
 
-                  <div className="property-content">
-                    <div className="price mb-2"><span>$1,291,000</span></div>
-                    <div>
-                      <span className="d-block mb-2 text-black-50"
-                        >5232 California Fake, Ave. 21BC</span
-                      >
-                      <span className="city d-block mb-3">California, USA</span>
+      <div className="property-content">
+        <div className="price mb-2">
+          <span>
+            ${property?.price?.toLocaleString?.() ?? "0"}
+          </span>
+        </div>
 
-                      <div className="specs d-flex mb-4">
-                        <span className="d-block d-flex align-items-center me-3">
-                          <span className="icon-bed me-2"></span>
-                          <span className="caption">2 beds</span>
-                        </span>
-                        <span className="d-block d-flex align-items-center">
-                          <span className="icon-bath me-2"></span>
-                          <span className="caption">2 baths</span>
-                        </span>
-                      </div>
+        <div>
+          <span className="d-block mb-2 text-black-50">
+            {property?.street}
+          </span>
 
-                      <a
-                        href="property-single.html"
-                        className="btn btn-primary py-2 px-3"
-                        >See details</a
-                      >
-                    </div>
-                  </div>
-                </div>
-  )
-}
+          <span className="city d-block mb-3">
+            {property?.location}, {property?.country}
+          </span>
 
-export default PropertyCard
+          <div className="specs d-flex mb-4">
+            <span className="d-flex align-items-center me-3">
+              <span className="icon-bed me-2"></span>
+              <span className="caption">
+                {property?.beds ?? 0} beds
+              </span>
+            </span>
+
+            <span className="d-flex align-items-center">
+              <span className="icon-bath me-2"></span>
+              <span className="caption">
+                {property?.rooms ?? 0} rooms
+              </span>
+            </span>
+          </div>
+
+          <a href="#" className="btn btn-primary py-2 px-3">
+            See details
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PropertyCard;

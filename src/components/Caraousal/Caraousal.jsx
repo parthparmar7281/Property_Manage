@@ -8,7 +8,7 @@ import "swiper/css/autoplay";
 export const Caraousal = () => {
   return (
     <div className="hero">
-    <div class="hero-slide">
+    <div className="hero-slide">
     <Swiper
       modules={[Autoplay]}
       autoplay={{

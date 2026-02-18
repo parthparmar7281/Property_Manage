@@ -2,13 +2,13 @@ import React from 'react'
 const Navbar = () => {
   return (
     <>
-    <div class="d-inline-block d-lg-none site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icofont-close js-menu-toggle"></span>
+    <div className="d-inline-block d-lg-none site-mobile-menu site-navbar-target">
+      <div className="site-mobile-menu-header">
+        <div className="site-mobile-menu-close">
+          <span className="icofont-close js-menu-toggle"></span>
         </div>
       </div>
-      <div class="site-mobile-menu-body"></div>
+      <div className="site-mobile-menu-body"></div>
     </div>
     
       <nav className="site-nav">

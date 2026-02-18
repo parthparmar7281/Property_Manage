@@ -1,16 +1,23 @@
 import logo from './logo.svg';
 import Navbar from './components/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Footer from './components/Footer';
 import PropertyCard from './components/PropertyCard';
 import { Caraousal } from './components/Caraousal/Caraousal';
+import PropertyList from './pages/PropertyList';
+import { TestinomialCard } from './components/TestinomialCard';
+import { ServiceCard } from './components/ServiceCard';
+import { AboutCard } from './components/AboutCard';
+import { AgentCard } from './components/AgentCard';
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <Caraousal/>           
-      <PropertyCard/>
+      <PropertyList/>
+      <ServiceCard/>
+      <TestinomialCard/>
+      <AboutCard/>
+      <AgentCard/>
       <Footer/>
     </div>
   );
