@@ -1,37 +1,25 @@
 import React from "react";
-import services from "../static_resource/services";
 
-export const ServiceCard = () => {
+export const ServiceCard = ({ service }) => {
   return (
-    <section className="features-1">
-      <div className="container">
-        <div className="row">
+    <div
+      className="col-6 col-lg-3"
+      data-aos="fade-up"
+      data-aos-delay={service.delay}
+    >
+      <div className="box-feature">
+        <span className={service.icon}></span>
 
-          {services.map((service) => (
-            <div
-              className="col-6 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay={service.delay}
-              key={service.id}
-            >
-              <div className="box-feature">
-                <span className={service.icon}></span>
+        <h3 className="mb-3">{service.title}</h3>
 
-                <h3 className="mb-3">{service.title}</h3>
+        <p>{service.description}</p>
 
-                <p>{service.description}</p>
-
-                <p>
-                  <a href="#" className="learn-more">
-                    Learn More
-                  </a>
-                </p>
-              </div>
-            </div>
-          ))}
-
-        </div>
+        <p>
+          <a href="#" className="learn-more">
+            Learn More
+          </a>
+        </p>
       </div>
-    </section>
+    </div>
   );
 };

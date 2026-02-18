@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
@@ -36,7 +38,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li><a href="services.html">Services</a></li>
+              <li><Link to="/service">Service</Link></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>

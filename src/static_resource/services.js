@@ -31,6 +31,7 @@ const services = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
     delay: 600,
   },
+  
 ];
 
 export default services;
