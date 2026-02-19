@@ -1,13 +1,20 @@
 import React from 'react'
-import { ServiceCard } from '../components/ServiceCard'
 import { ServicesSection } from '../sections/Home/ServicesSection'
+import TestimonialList from '../sections/Home/TestimonialList '
+import Breadcrumb from '../components/Breadcrumb'
 
 const Service = () => {
   return (
     <div>
- <ServicesSection
+    <Breadcrumb
+        title="Services"
+        bgImage="images/hero_bg_1.jpg" 
+      />
+      <ServicesSection
         title="All Services"
-      />    </div>
+      />    
+      <TestimonialList/>
+    </div>
   )
 }
 

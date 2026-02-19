@@ -7,7 +7,7 @@ export const ServicesSection = ({ title, limit, showButton }) => {
   const displayServices = limit
     ? services.slice(0, limit)
     : services;
-
+    
   return (
     <section className="features-1">
       <div className="container">

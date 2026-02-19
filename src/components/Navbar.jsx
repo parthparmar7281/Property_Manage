@@ -17,12 +17,12 @@ const Navbar = () => {
       <div className="container">
         <div className="menu-bg-wrap">
           <div className="site-navigation">
-            <a href="index.html" className="logo m-0 float-start">Property</a>
+            <Link to="/" className="logo m-0 float-start">Property</Link>
 
             <ul
               className="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
             >
-              <li className="active"><a href="index.html">Home</a></li>
+              <li className="active"><Link to="/">Home</Link></li>
               <li className="has-children">
                 <a href="properties.html">Properties</a>
                 <ul className="dropdown">
@@ -39,8 +39,8 @@ const Navbar = () => {
                 </ul>
               </li>
               <li><Link to="/service">Service</Link></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
             
             <a
