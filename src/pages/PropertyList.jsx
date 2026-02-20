@@ -6,6 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 const PropertyList = () => {
   return (
@@ -18,15 +19,14 @@ const PropertyList = () => {
             </h2>
           </div>
 
-          <div className="col-lg-6 text-lg-end">
+          <div className="col-lg-6 text-lg-end property_btn">
             <p>
-              <a
-                href="#"
-                target="_blank"
+              <Link
+                to="/property"
                 className="btn btn-primary text-white py-3 px-4"
               >
-                View all properties
-              </a>
+                View All properties
+              </Link>
             </p>
           </div>
         </div>

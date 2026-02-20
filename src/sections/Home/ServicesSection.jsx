@@ -22,7 +22,7 @@ export const ServicesSection = ({ title, limit, showButton }) => {
 
         {showButton && (
           <div className="text-center mt-4">
-            <Link to="/service" className="btn btn-primary">
+            <Link to="/service" className="btn btn-primary mb-4">
               View All Services
             </Link>
           </div>

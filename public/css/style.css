@@ -9725,7 +9725,12 @@ textarea {
     font-weight: 500; }
     @media (max-width: 767.98px) {
       .section .heading {
-        font-size: 36px; } }
+        font-size: 36px; 
+        text-align: center;
+      } 
+      
+    
+    }
 
 .testimonial blockquote {
   font-style: 18px;

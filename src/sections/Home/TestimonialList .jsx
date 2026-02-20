@@ -11,9 +11,9 @@ const TestimonialList = () => {
   return (
     <div className="section sec-testimonials">
       <div className="container">
-      <div className="row mb-5 align-items-center">
+      <div className="row mb-5 align-items-center justify-content-center">
           <div className="col-md-6">
-            <h2 className="font-weight-bold heading text-primary mb-4 mb-md-0">
+            <h2 className="font-weight-bold heading text-primary text-center mb-4 mb-md-0">
               Customer Says
             </h2>
           </div>

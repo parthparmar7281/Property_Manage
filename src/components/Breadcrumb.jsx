@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import PropertyDetail from "./PropertyDetails/PropertyDetails";
 
 const Breadcrumb = ({ title, bgImage }) => {
+  const location = useLocation();
+  const isProperty = location.pathname.includes("property");
   return (
     <div
       className="hero page-inner overlay"
@@ -26,6 +29,11 @@ const Breadcrumb = ({ title, bgImage }) => {
                 <li className="breadcrumb-item">
                   <Link to="/">Home</Link>
                 </li>
+                {isProperty &&
+                <li className="breadcrumb-item">
+                  <Link to="/">Property</Link>
+                </li>  
+                }
 
                 <li
                   className="breadcrumb-item active text-white-50"

@@ -1,213 +1,260 @@
-/* ===============================
-   CONTACT FORM WRAPPER
-================================= */
-
-.contact-form {
-  max-width: 600px;
-  margin: auto;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-  transition: 0.4s ease;
-}
-
-.contact-form:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
-}
-
-/* ===============================
-   FORM GROUP
-================================= */
-
-.form-group {
-  position: relative;
-  margin-bottom: 28px;
-}
-
-/* ===============================
-   INPUT + TEXTAREA
-================================= */
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 16px 14px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  outline: none;
-  font-size: 15px;
-  font-weight: 400;
+/* ===== MAIN WRAPPER ===== */
+.contact-wrapper {
+  min-height: 100vh;
   background: #fff;
-  transition: all 0.35s ease;
-  resize: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Hover effect */
-
-.form-group input:hover,
-.form-group textarea:hover {
-  border-color: #c7d2fe;
-}
-
-/* Focus Glow Effect */
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
-}
-
-/* ===============================
-   FLOATING LABEL
-================================= */
-
-.form-group label {
-  position: absolute;
-  top: 50%;
-  left: 14px;
-  transform: translateY(-50%);
-  background: #ffffff;
-  padding: 0 6px;
-  color: #9ca3af;
-  font-size: 14px;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-/* textarea label position */
-
-.form-group textarea + label {
-  top: 22px;
-}
-
-/* Floating animation */
-
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label {
-  top: -8px;
-  font-size: 12px;
-  color: #4f46e5;
-}
-
-/* ===============================
-   ANIMATED UNDERLINE EFFECT
-================================= */
-
-.input-border {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #4f46e5, #6366f1);
-  transition: width 0.4s ease;
-  border-radius: 2px;
-}
-
-.form-group input:focus ~ .input-border,
-.form-group textarea:focus ~ .input-border {
+/* ===== CONTAINER ===== */
+.contact-container {
+  max-width: 1200px;
   width: 100%;
-}
-
-/* ===============================
-   BUTTON STYLE
-================================= */
-
-.contact-btn {
-  width: 100%;
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: #ffffff;
-  border: none;
-  padding: 15px 28px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  letter-spacing: 0.4px;
-  transition: all 0.35s ease;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  opacity: 0.8;
   position: relative;
   overflow: hidden;
 }
 
-/* Hover Lift */
-
-.contact-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.35);
-}
-
-/* Click animation */
-
-.contact-btn:active {
-  transform: scale(0.96);
-}
-
-/* Shine hover animation */
-
-.contact-btn::before {
+.contact-container::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -120%;
-  width: 120%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.25);
-  transform: skewX(-25deg);
-  transition: 0.6s;
+  inset: 0;
+  background: rgba(0,0,0,0.2); /* dark overlay */
+  z-index: 1;
 }
 
-.contact-btn:hover::before {
-  left: 120%;
+/* ===== LEFT SIDE ===== */
+.contact-left,
+.contact-form-card {
+  position: relative;
+  z-index: 2;
 }
 
-/* ===============================
-   PLACEHOLDER FIX (IMPORTANT)
-================================= */
+.contact-title {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 20px;
+    text-shadow: 0 10px 25px rgba(0,0,0,0.4);
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: transparent;
 }
 
-/* ===============================
-   RESPONSIVE
-================================= */
+.contact-desc {
+  opacity: 0.85;
+  margin-bottom: 30px;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  max-width: 520px;
+  line-height: 1.6;
+}
 
-@media (max-width: 768px) {
-  .contact-form {
+.contact-info div {
+  margin-bottom: 18px;
+}
+
+.contact-info h4 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  
+}
+.contact-info p {
+  color: black ;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ===== FORM CARD ===== */
+.contact-form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  animation: fadeUp 0.6s ease;
+}
+
+.contact-form-card h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+/* Floating Label */
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 6px;
+  color: #888;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+/* Focus Effect */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #3f5efb;
+  box-shadow: 0 0 0 3px rgba(63,94,251,0.15);
+}
+
+/* Floating animation */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color: #3f5efb;
+}
+
+/* ===== BUTTON ===== */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3f5efb, #6a82fb);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(63,94,251,0.4);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container {
     padding: 25px;
   }
 
-  .form-group input,
-  .form-group textarea {
-    padding: 14px 12px;
+  .contact-form-card {
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 26px;
   }
 }
 
-/* ===============================
-   OPTIONAL: DARK MODE SUPPORT
-================================= */
+.contact-left {
+  color: #fff;
+  max-width: 520px;
+}
+.contact-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-@media (prefers-color-scheme: dark) {
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 
-  .contact-form {
-    background: #111827;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  }
+  padding: 14px 18px;
+  border-radius: 12px;
 
-  .form-group input,
-  .form-group textarea {
-    background: #1f2933;
-    border-color: #374151;
-    color: #fff;
-  }
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
 
-  .form-group label {
-    background: #111827;
-    color: #9ca3af;
-  }
+  transition: all 0.35s ease;
+}
+
+.info-card:hover {
+  transform: translateX(8px);
+  background: rgba(255,255,255,0.2);
+}
+
+.info-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 18px;
+
+  background: #005555;
+  color: #fff;
+}
+
+.info-card h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.info-card p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: black;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PropertyCard = ({ property }) => {
 
@@ -44,9 +45,9 @@ const PropertyCard = ({ property }) => {
             </span>
           </div>
 
-          <a href="#" className="btn btn-primary py-2 px-3">
+          <Link to={`/property/${property.id}`} className="btn btn-primary py-2 px-3">
             See details
-          </a>
+          </Link>
         </div>
       </div>
     </div>

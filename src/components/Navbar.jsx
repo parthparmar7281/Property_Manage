@@ -12,7 +12,6 @@ const Navbar = () => {
       </div>
       <div className="site-mobile-menu-body"></div>
     </div>
-    
       <nav className="site-nav">
       <div className="container">
         <div className="menu-bg-wrap">
@@ -24,7 +23,7 @@ const Navbar = () => {
             >
               <li className="active"><Link to="/">Home</Link></li>
               <li className="has-children">
-                <a href="properties.html">Properties</a>
+                <Link to="/property">Properties</Link>
                 <ul className="dropdown">
                   <li><a href="#">Buy Property</a></li>
                   <li><a href="#">Sell Property</a></li>

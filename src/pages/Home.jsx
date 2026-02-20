@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 import PropertyCard from '../components/PropertyCard';
 import { Caraousal } from '../components/Caraousal/Caraousal';
 import PropertyList from '../pages/PropertyList';
@@ -13,6 +13,7 @@ import AgentList from '../sections/Home/AgentList';
 import AboutSection from '../sections/Home/AboutSection';
 import { HireAgentSection } from '../sections/Home/HireAgentSection';
 import { CounterProperty } from '../sections/Home/CounterProperty';
+import PropertyDetails from '../components/PropertyDetails/PropertyDetails';
 const Home = () => {
   return (
     <div>
