@@ -14,8 +14,7 @@ const AgentList = ({title}) => {
             </h2>
 
             <p className="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Numquam enim pariatur similique debitis vel nisi.
+              Helping clients find the right property with expert guidance and trusted real estate advice.
             </p>
           </div>
         </div>

@@ -19,37 +19,37 @@ export const About = () => {
             <h2 class="font-weight-bold heading text-primary mb-4">About Us</h2>
           </div>
           <div class="col-lg-6">
-            <p class="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              enim pariatur similique debitis vel nisi qui reprehenderit totam?
-              Quod maiores.
+              <p class="text-black-50">
+              We specialize in professional property management services, helping
+              property owners maximize value while ensuring tenants enjoy a smooth
+              and comfortable living experience. Our team manages residential and
+              commercial properties with transparency and efficiency.
             </p>
+
             <p class="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              saepe, explicabo nihil. Est, autem error cumque ipsum repellendus
-              veniam sed blanditiis unde ullam maxime veritatis perferendis
-              cupiditate, at non esse!
+              From property marketing and tenant screening to rent collection and
+              maintenance coordination, we handle every aspect of property management
+              with attention to detail and industry expertise.
             </p>
+
             <p class="text-black-50">
-              Enim, nisi labore exercitationem facere cupiditate nobis quod
-              autem veritatis quis minima expedita. Cumque odio illo iusto
-              reiciendis, labore impedit omnis, nihil aut atque, facilis
-              necessitatibus asperiores porro qui nam.
+              Our goal is to simplify property ownership by providing reliable
+              management solutions that protect investments, reduce vacancies, and
+              deliver consistent long-term returns.
             </p>
           </div>
           <div class="col-lg-6">
-            <p class="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              saepe, explicabo nihil. Est, autem error cumque ipsum repellendus
-              veniam sed blanditiis unde ullam maxime veritatis perferendis
-              cupiditate, at non esse!
-            </p>
-            <p class="text-black-50">
-              Enim, nisi labore exercitationem facere cupiditate nobis quod
-              autem veritatis quis minima expedita. Cumque odio illo iusto
-              reiciendis, labore impedit omnis, nihil aut atque, facilis
-              necessitatibus asperiores porro qui nam.
-            </p>
+           <p class="text-black-50">
+            With deep knowledge of the real estate market, we ensure properties are
+            priced competitively and maintained to the highest standards, attracting
+            quality tenants and increasing property value.
+          </p>
+
+          <p class="text-black-50">
+            Whether you are a homeowner, investor, or tenant, our dedicated team
+            provides personalized support, clear communication, and trusted
+            property management services every step of the way.
+          </p>
           </div>
         </div>
       </div>

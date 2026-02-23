@@ -17,13 +17,12 @@ const AboutSection = ({aboutId = null, showAll = false}) => {
               Let's find home that's perfect for you
             </h2>
             <p className="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              enim pariatur similique debitis vel nisi qui reprehenderit.
+             Explore verified properties with expert support and trusted real estate solutions.
             </p>
           </div>
         </div>
-             {aboutData.map((about) => (
-                <AboutCard key={about.id} about={about} />
+             {aboutData.map((about,index) => (
+                <AboutCard key={about.id} about={about} index={index}/>
             ))}    
         </div>
     </div>

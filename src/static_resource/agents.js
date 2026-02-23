@@ -5,7 +5,7 @@ const agents = [
     role: "Real Estate Agent",
     image: "images/person_1-min.jpg",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam.",
+      "James specializes in helping clients buy and sell properties with confidence, offering deep market knowledge, honest advice, and smooth end-to-end transaction support.",
     social: {
       twitter: "#",
       facebook: "#",
@@ -19,7 +19,7 @@ const agents = [
     role: "Property Consultant",
     image: "images/person_2-min.jpg",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam.",
+      "Jean provides personalized property consultation, guiding clients through investment opportunities, pricing strategies, and property selection based on their goals.",
     social: {
       twitter: "#",
       facebook: "#",
@@ -33,7 +33,7 @@ const agents = [
     role: "Senior Real Estate Agent",
     image: "images/person_3-min.jpg",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam.",
+      "With years of industry experience, Alicia delivers expert negotiation skills and strategic insights to help clients secure the best deals in competitive real estate markets.",
     social: {
       twitter: "#",
       facebook: "#",
@@ -41,7 +41,6 @@ const agents = [
       instagram: "#",
     },
   },
-  
 ];
 
 export default agents;

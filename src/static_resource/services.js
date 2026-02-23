@@ -4,7 +4,7 @@ const services = [
     icon: "flaticon-house",
     title: "Our Properties",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
+      "Explore a wide range of carefully selected residential and commercial properties designed to match different lifestyles, budgets, and investment goals.",
     delay: 300,
   },
   {
@@ -12,7 +12,7 @@ const services = [
     icon: "flaticon-building",
     title: "Property for Sale",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
+      "Browse verified properties available for sale with transparent pricing, detailed insights, and expert guidance to help you make confident buying decisions.",
     delay: 500,
   },
   {
@@ -20,7 +20,7 @@ const services = [
     icon: "flaticon-house-3",
     title: "Real Estate Agent",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
+      "Connect with experienced real estate agents who provide professional advice, market knowledge, and personalized support throughout your property journey.",
     delay: 400,
   },
   {
@@ -28,33 +28,33 @@ const services = [
     icon: "flaticon-house-1",
     title: "House for Sale",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
+      "Discover modern homes and family houses in prime locations, offering comfort, quality construction, and excellent value for long-term living or investment.",
     delay: 600,
-  },  {
-    id: 2,
+  },
+  {
+    id: 5,
     icon: "flaticon-building",
     title: "Property for Sale",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
+      "Find premium apartments, villas, and commercial spaces listed with verified details to ensure a smooth and secure property purchasing experience.",
     delay: 500,
   },
   {
-    id: 3,
+    id: 6,
     icon: "flaticon-house-3",
     title: "Real Estate Agent",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
+      "Our trusted agents simplify buying and selling by handling negotiations, documentation, and market analysis with complete professionalism.",
     delay: 400,
   },
   {
-    id: 4,
+    id: 7,
     icon: "flaticon-house-1",
     title: "House for Sale",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.",
+      "Choose from a variety of ready-to-move and newly developed houses tailored to modern living standards and future investment growth.",
     delay: 600,
   },
-  
 ];
 
 export default services;

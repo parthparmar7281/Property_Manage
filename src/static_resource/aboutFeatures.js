@@ -7,19 +7,19 @@ const aboutFeatures = [
         icon: "icon-home2",
         title: "2M Properties",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.",
+          "Access millions of verified residential and commercial properties tailored to suit every lifestyle, budget, and investment requirement.",
       },
       {
         icon: "icon-person",
         title: "Top Rated Agents",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.",
+          "Work with highly experienced and trusted real estate professionals dedicated to providing expert guidance and seamless property transactions.",
       },
       {
         icon: "icon-security",
         title: "Legit Properties",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.",
+          "Every listing is carefully verified to ensure legal compliance, authenticity, and a safe property buying or selling experience.",
       },
     ],
   },
@@ -33,19 +33,19 @@ const aboutFeatures = [
         icon: "icon-building",
         title: "Modern Apartments",
         description:
-          "We provide premium modern apartments designed for comfort and luxury living.",
+          "Discover thoughtfully designed modern apartments that combine comfort, functionality, and contemporary architecture for better living.",
       },
       {
         icon: "icon-map",
         title: "Prime Locations",
         description:
-          "All properties are located in well-developed and high-demand areas.",
+          "Our properties are located in rapidly developing neighborhoods with excellent connectivity, amenities, and future growth potential.",
       },
       {
         icon: "icon-handshake",
         title: "Trusted Deals",
         description:
-          "Transparent documentation and trusted property transactions guaranteed.",
+          "Enjoy transparent pricing, secure documentation, and reliable transactions backed by professional real estate expertise.",
       },
     ],
   },
@@ -59,23 +59,22 @@ const aboutFeatures = [
         icon: "icon-search2",
         title: "Easy Property Search",
         description:
-          "Find your dream home quickly using our smart property search system.",
+          "Quickly find your ideal property using advanced filters, smart search tools, and personalized recommendations.",
       },
       {
         icon: "icon-calculator",
         title: "Affordable Pricing",
         description:
-          "We offer competitive pricing with flexible investment options.",
+          "Flexible pricing options and competitive market rates help you invest confidently without compromising quality.",
       },
       {
         icon: "icon-support",
         title: "24/7 Support",
         description:
-          "Our expert team is always available to assist you anytime.",
+          "Our dedicated support team is available around the clock to assist with inquiries, property visits, and transaction guidance.",
       },
     ],
   },
-  
 ];
 
 export default aboutFeatures;

@@ -12,7 +12,7 @@ const PropertyDetail = () => {
     <div>
     <Breadcrumb
         title={property.title}
-        bgImage="images/hero_bg_3.jpg" 
+        bgImage="/images/hero_bg_3.jpg" 
       />    
       <div className="pd-container">
       <div className="pd-gallery">
