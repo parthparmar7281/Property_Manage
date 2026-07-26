@@ -1,29 +1,34 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Service from "./pages/Service";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
+import { Properties } from "./pages/Properties";
+import PropertyDetail from "./components/PropertyDetails/PropertyDetails";
 
-import { Route, Routes } from 'react-router-dom';
-import Service from './pages/Service';
-import Home from './pages/Home';
-import { About } from './pages/About';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer/Footer';
-import { Contact } from './pages/Contact';
-import PropertyDetail from './components/PropertyDetails/PropertyDetails';
-import { Properties } from './pages/Properties';
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
+import MainLayout from "./components/layout/Mainlayout";
+import AddProperty from "./components/AddProperty";
+
 function App() {
   return (
-    <div className="App"> 
-    <Navbar/>   
-    <main>
-       <Routes>
+    <Routes>
+
+      <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/property" element={<Properties />} />
         <Route path="/property/:id" element={<PropertyDetail />} />
-      </Routes>
-    </main>
-    <Footer/>
-    </div>
+        <Route path="/addProperty" element={<AddProperty />} />
+      </Route>
+
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+
+    </Routes>
   );
 }
 

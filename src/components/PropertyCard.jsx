@@ -7,7 +7,7 @@ const PropertyCard = ({ property }) => {
     <div className="property-item">
       <a href="#" className="img">
         <img
-          src={property?.img}
+          src={property?.coverImage || property?.img}
           alt={property?.title}
           className="img-fluid"
         />
@@ -22,30 +22,30 @@ const PropertyCard = ({ property }) => {
 
         <div>
           <span className="d-block mb-2 text-black-50">
-            {property?.street}
+            {property?.address || property?.street}
           </span>
 
           <span className="city d-block mb-3">
-            {property?.location}, {property?.country}
+            {property?.city || property?.location}{property?.country ? `, ${property.country}` : ", India"}
           </span>
 
           <div className="specs d-flex mb-4">
             <span className="d-flex align-items-center me-3">
               <span className="icon-bed me-2"></span>
               <span className="caption">
-                {property?.beds ?? 0} beds
+                {property?.bedrooms ?? property?.beds ?? 0} beds
               </span>
             </span>
 
             <span className="d-flex align-items-center">
               <span className="icon-bath me-2"></span>
               <span className="caption">
-                {property?.rooms ?? 0} rooms
+                {property?.bathrooms ?? property?.rooms ?? 0} rooms
               </span>
             </span>
           </div>
 
-          <Link to={`/property/${property.id}`} className="btn btn-primary py-2 px-3">
+          <Link to={`/property/${property.propertyId ?? property.id}`} className="btn btn-primary py-2 px-3">
             See details
           </Link>
         </div>

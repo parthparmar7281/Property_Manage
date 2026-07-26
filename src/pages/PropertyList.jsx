@@ -1,5 +1,7 @@
+import React, { useState, useEffect } from "react";
 import PropertyCard from "../components/PropertyCard";
 import Property from "../static_resource/Property";
+import { propertyApi } from "../services/propertyService";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -9,6 +11,24 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
 const PropertyList = () => {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    const fetchProperties = async () => {
+      try {
+        const response = await propertyApi.getAllProperties();
+       if (response?.data?.length > 0) {
+            setProperties(response.data);
+        } else {
+            setProperties(Property);
+        }
+      } catch (error) {
+        console.error("Failed to fetch properties from backend:", error);
+      }
+    };
+    fetchProperties();
+  }, []);
+
   return (
     <div className="section">
       <div className="container">
@@ -44,8 +64,8 @@ const PropertyList = () => {
             992: { slidesPerView: 3 },
           }}
         >
-          {Property.map((item) => (
-            <SwiperSlide key={item.id}>
+          {properties.map((item) => (
+            <SwiperSlide key={item.propertyId ?? item.id}>
               <PropertyCard property={item} />
             </SwiperSlide>
           ))}

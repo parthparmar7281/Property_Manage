@@ -2,6 +2,14 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const userStr = localStorage.getItem("user");
+  const user = userStr ? JSON.parse(userStr) : null;
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  };
+
   return (
     <>
     <div className="d-inline-block d-lg-none site-mobile-menu site-navbar-target">
@@ -40,6 +48,24 @@ const Navbar = () => {
               <li><Link to="/service">Service</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
+              {user?.role === "Seller" && (
+                <li><Link to="/addProperty">Add Property</Link></li>
+              )}
+              {user ? (
+                <>
+                  <li><span className="text-white-50 ms-3 me-2" style={{ fontSize: "14px" }}>Hi, {user.fullName} ({user.role})</span></li>
+                  <li>
+                    <a href="#" onClick={(e) => { e.preventDefault(); handleLogout(); }}>
+                      Logout
+                    </a>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li><Link to="/login">Login</Link></li>
+                  <li><Link to="/signup">Sign Up</Link></li>
+                </>
+              )}
             </ul>
             
             <a
