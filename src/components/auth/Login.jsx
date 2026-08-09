@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 import { authApi } from "../../services/authService";
+import { useAuth } from "../../context/AuthContext";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { login } = useAuth();
+
   const [form, setForm] = useState({
     email: "",
     password: ""
@@ -25,9 +30,9 @@ const Login = () => {
 
       if (res.data.success) {
         console.log("Login Success:", res.data);
-        localStorage.setItem("user", JSON.stringify(res.data));
+        login(res.data);
         alert("Login Successful ");
-        window.location.href = "/";
+        navigate("/");
       } else {
         alert(res.data.message || "Invalid Credentials");
       }

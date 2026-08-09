@@ -2,19 +2,23 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { propertyApi } from "../services/propertyService";
 import Breadcrumb from "./Breadcrumb";
+import { useAuth } from "../context/AuthContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const AddProperty = () => {
   const navigate = useNavigate();
   const [submitting, setSubmitting] = useState(false);
-
-  const userStr = localStorage.getItem("user");
-  const user = userStr ? JSON.parse(userStr) : null;
+  const { user } = useAuth();
 
   useEffect(() => {
     if (!user || user.role !== "Seller") {
       alert("Access Denied: Only users with the Seller role can add properties.");
       navigate("/");
+    } else if (user?.userId) {
+      setFormData((prev) => ({
+        ...prev,
+        sellerId: user.userId
+      }));
     }
   }, [user, navigate]);
   const [formData, setFormData] = useState({
@@ -32,7 +36,7 @@ const AddProperty = () => {
     city: "",
     state: "",
     pincode: "",
-    sellerId: ""
+    sellerId: user?.userId || ""
   });
 
   const handleChange = (e) => {
@@ -86,7 +90,7 @@ const AddProperty = () => {
         city: "",
         state: "",
         pincode: "",
-        sellerId: ""
+        sellerId: user?.userId || ""
       });
 
       navigate("/property");
@@ -361,7 +365,7 @@ const AddProperty = () => {
                     </div>
 
                     <div className="col-md-4">
-                      <label className="form-label fw-semibold">Seller ID <span className="text-danger">*</span></label>
+                      <label className="form-label fw-semibold">Seller ID</label>
                       <div className="input-group">
                         <span className="input-group-text"><i className="bi bi-person-badge"></i></span>
                         <input
@@ -372,7 +376,7 @@ const AddProperty = () => {
                           onChange={handleChange}
                           placeholder="ID"
                           min="1"
-                          required
+                          readOnly
                         />
                       </div>
                     </div>
